@@ -19,7 +19,7 @@ public class EmailValidation {
 	}
 
 	private static boolean checkForValidEmail(String email) {
-		String regex = "[a-zA-Z][a-zA-Z0-9_-]*[a-zA-Z0-9]";
+		String regex = "[a-zA-Z][a-zA-Z0-9_-]*[a-zA-Z0-9]@[a-zA-Z0-9]*";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(email);
 		return matcher.matches();
